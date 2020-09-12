@@ -8,7 +8,7 @@ fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out= cv2.VideoWriter('movement .avi',fourcc, 20.0, (640,480))
 
 
-trainset_image = fr.load_image_file("sam2.jpeg")
+trainset_image = fr.load_image_file("sam2.jpeg") # add thr image for training 
 test_face_encoding = fr.face_encodings(trainset_image)[0]
 
 known_face_encondings = [test_face_encoding]
@@ -49,4 +49,4 @@ while True:
 video_capture.release()
 out.release()
 cv2.destroyAllWindows()
-
+# this code will save the video on your device
