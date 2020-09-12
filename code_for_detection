@@ -8,10 +8,10 @@ fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out= cv2.VideoWriter('movement .avi',fourcc, 20.0, (640,480))
 
 
-bruno_image = fr.load_image_file("sam2.jpeg")
-bruno_face_encoding = fr.face_encodings(bruno_image)[0]
+trainset_image = fr.load_image_file("sam2.jpeg")
+test_face_encoding = fr.face_encodings(trainset_image)[0]
 
-known_face_encondings = [bruno_face_encoding]
+known_face_encondings = [test_face_encoding]
 known_face_names = ["sharzeel"]
 
 while True:
